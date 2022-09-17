@@ -15,9 +15,9 @@ namespace Otus.DynamicProgramming.Logic
            var map = GetMap();
 
             var islandsCount = 0;
-            for (var i = 0; i < map.GetUpperBound(0); i++)
+            for (var i = 0; i < map.GetUpperBound(0) + 1; i++)
             {
-                for (var j = 0; j < map.GetUpperBound(0); j++)
+                for (var j = 0; j < map.GetUpperBound(0) + 1; j++)
                 {
                     if (map[i, j] != 1) 
                         continue;
@@ -52,7 +52,7 @@ namespace Otus.DynamicProgramming.Logic
 
         private static void Walk(int x, int y, int[,] map)
         {
-            var n = map.GetUpperBound(0);
+            var n = map.GetUpperBound(0) + 1;
 
             if((x < 0 || x >= n) || (y < 0 || y >= n)) 
                 return;
