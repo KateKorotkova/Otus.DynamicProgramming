@@ -5,29 +5,30 @@ using System.Text;
 
 namespace Otus.DynamicProgramming.Logic
 {
-    //Цифровая ёлочка +1 байт
+    //Цифровая ёлочка
     //https://www.robotsharp.info/index.php?page=TaskInfo&taskId=3707
     // Наибольший общий делитель
     public class Tree
     {
-        public static void Main()
-        {
-            var n = int.Parse(Console.ReadLine());
+        //public static void Main()
+        //{
+        //    var n = int.Parse(Console.ReadLine());
 
-            var tree = new int[n, n];
+        //    var tree = new int[n, n];
 
-            for (var i = 0; i < n; i++)
-            {
-                for (var j = 0; j <= i; j++)
-                {
-                    tree[i, j] = int.Parse(Console.ReadLine());
-                }
-            }
+        //    for (var i = 0; i < n; i++)
+        //    {
+        //        for (var j = 0; j <= i; j++)
+        //        {
+        //            var number = int.Parse(Console.ReadLine());
+        //            tree[i, j] = number;
+        //        }
+        //    }
 
-            var result = Run(tree, n);
+        //    var result = Run(tree, n);
 
-            Console.WriteLine(result);
-        }
+        //    Console.WriteLine(result);
+        //}
 
         public static int Run(int[,] tree, int n)
         {

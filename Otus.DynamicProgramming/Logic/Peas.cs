@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Otus.DynamicProgramming.Logic
 {
-    //Раз/два горох +1 байт
+    //Раз/два горох
     //https://www.robotsharp.info/index.php?page=TaskInfo&taskId=3704
     // Наибольший общий делитель
     public class Peas

@@ -5,64 +5,34 @@ using System.Text;
 
 namespace Otus.DynamicProgramming.Logic
 {
-    //Раз/два горох +1 байт
-    //https://www.robotsharp.info/index.php?page=TaskInfo&taskId=3704
-    // Наибольший общий делитель
+    //Пятью-восемь
+    //https://www.robotsharp.info/index.php?page=TaskInfo&taskId=3706
     public class Numbers
     {
-        public static void Main()
-        {
-            var line = Console.ReadLine().Split('+', '/');
-            var firstNumerator = Convert.ToInt16(line[0]);
-            var firstDenominator = Convert.ToInt16(line[1]);
-            var secondNumerator = Convert.ToInt16(line[2]);
-            var secondDenominator = Convert.ToInt16(line[3]);
+        //public static void Main()
+        //{
+        //    var n = Convert.ToInt64(Console.ReadLine());
 
-            var first = firstNumerator * secondDenominator + firstDenominator * secondNumerator;
-            var second = firstDenominator * secondDenominator;
+        //    long f5 = 1;
+        //    long f8 = 1;
+        //    long f55 = 0;
+        //    long f88 = 0;
 
-            var nod = NOD(first, second);
+        //    for (var j = 2; j <= n; j++)
+        //    {
+        //        var n5 = f8 + f88;
+        //        var n8 = f5 + f55;
+        //        var n55 = f5;
+        //        var n88 = f8;
+        //        f5 = n5;
+        //        f8 = n8;
+        //        f55 = n55;
+        //        f88 = n88;
+        //    }
 
-            first = first / nod;
-            second = second / nod;
+        //    var result = f5 + f8 + f55 + f88;
 
-            //Console.WriteLine($"{first} / {second}");
-            Console.WriteLine(first + "/" + second);
-        }
-
-        public static int NOD(int first, int second)
-        {
-            if (first == second) return first;
-            if (first == 0) return second;
-            if (second == 0) return first;
-
-            if (IsEven(first) && IsEven(second)) 
-                return NOD(first / 2, second / 2) * 2;
-
-            if (IsEven(first) && IsOdd(second))
-                return NOD(first / 2, second);
-
-            if (IsOdd(first) && IsEven(second))
-                return NOD(first, second / 2);
-
-            return first > second 
-                ? NOD((first - second) / 2, second) 
-                : NOD(first, (second - first) / 2);
-        }
-
-        
-        #region Support Methods
-
-        private static bool IsEven(int number)
-        {
-            return number % 2 == 0;
-        }
-
-        private static bool IsOdd(int number)
-        {
-            return !IsEven(number);
-        }
-
-        #endregion
+        //    Console.WriteLine(result);
+        //}
     }
 }
