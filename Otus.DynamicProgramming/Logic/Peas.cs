@@ -10,25 +10,25 @@ namespace Otus.DynamicProgramming.Logic
     // Наибольший общий делитель
     public class Peas
     {
-        public static void Main()
-        {
-            var line = Console.ReadLine().Split('+', '/');
-            var firstNumerator = Convert.ToInt16(line[0]);
-            var firstDenominator = Convert.ToInt16(line[1]);
-            var secondNumerator = Convert.ToInt16(line[2]);
-            var secondDenominator = Convert.ToInt16(line[3]);
+        //public static void Main()
+        //{
+        //    var line = Console.ReadLine().Split('+', '/');
+        //    var firstNumerator = Convert.ToInt16(line[0]);
+        //    var firstDenominator = Convert.ToInt16(line[1]);
+        //    var secondNumerator = Convert.ToInt16(line[2]);
+        //    var secondDenominator = Convert.ToInt16(line[3]);
             
-            var first = firstNumerator * secondNumerator + firstDenominator * secondDenominator;
-            var second = firstDenominator * secondDenominator;
+        //    var first = firstNumerator * secondDenominator + firstDenominator * secondNumerator;
+        //    var second = firstDenominator * secondDenominator;
             
-            var nod = NOD(first, second);
+        //    var nod = NOD(first, second);
 
-            first = first / nod;
-            second = second / nod;
+        //    first = first / nod;
+        //    second = second / nod;
 
-            //Console.WriteLine($"{first} / {second}");
-            Console.WriteLine(first + "/" + second);
-        }
+        //    //Console.WriteLine($"{first} / {second}");
+        //    Console.WriteLine(first + "/" + second);
+        //}
 
         public static int NOD(int first, int second)
         {
